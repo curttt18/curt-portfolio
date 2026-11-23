@@ -4,40 +4,33 @@ import "./styles.css";
 
 const projects = [
   {
-    number: "01", title: "Student Enrollment Management System",
-    category: "Web Application", featured: true,
-    description: "A multi-role enrollment system for managing student records, enrollments, academic grades, fees, and payments, with dedicated workflows for administrators, registrars, cashiers, and students.",
-    stack: ["Laravel 12", "PHP", "MySQL", "Blade", "Tailwind CSS"],
-    repo: "https://github.com/curttt18/Laravel_Finals",
-    visual: "enrollment"
-  },
-  {
-    number: "02", title: "CarRentalWeb", category: "Full Stack Web", featured: true,
-    description: "A car rental web application with user and administrator workflows, backed by a relational database and an ASP.NET Core API.",
-    stack: ["Angular", "ASP.NET Core", "MySQL"],
-    repo: "https://github.com/curttt18/CarRentalWeb",
-    visual: "cars"
-  },
-  {
-    number: "03", title: "RecipeBudget", category: "Mobile Application",
-    description: "A budget-focused recipe finder that lets users browse meals, filter recipes based on a budget, save recipes, and plan meals.",
-    stack: ["Flutter", "Dart", "Firebase"],
-    repo: "https://github.com/curttt18/RecipeBudget",
-    visual: "budget"
-  },
-  {
-    number: "04", title: "REcipe", category: "Mobile Application",
-    description: "A mobile recipe discovery project exploring recipe search, browsing, and connected data services.",
+    number: "01", title: "REcipe", category: "Award-Winning Capstone", featured: true,
+    award: "1st Runner-Up · UST Web and Mobile Development Track · Batch 2026",
+    description: "An award-winning mobile capstone project focused on recipe discovery. Built with a connected backend to support browsing and discovering recipes through a mobile experience.",
     stack: ["React Native", "Expo", "Supabase"],
     repo: "https://github.com/g-russo/REcipe",
     visual: "recipe"
   },
   {
-    number: "05", title: "Enhanced Download Page", category: "Frontend / UI",
-    description: "A frontend project focused on implementing and improving a download page interface.",
-    stack: ["Frontend", "UI Implementation"],
-    repo: "https://github.com/curttt18/Enhancedownloadpage",
-    visual: "download"
+    number: "02", title: "Little Stars", category: "Web Application", featured: true,
+    description: "A multi-role student enrollment management system for handling student records, enrollment workflows, academic grades, fees, and payments for administrators, registrars, cashiers, and students.",
+    stack: ["Laravel 12", "PHP", "MySQL", "Blade", "Tailwind CSS"],
+    repo: "https://github.com/curttt18/Laravel_Finals",
+    visual: "enrollment"
+  },
+  {
+    number: "03", title: "CarRentalWeb", category: "Full Stack Web",
+    description: "A car rental web application with user and administrator workflows, supported by an ASP.NET Core backend and a relational database.",
+    stack: ["Angular", "ASP.NET Core", "MySQL"],
+    repo: "https://github.com/curttt18/CarRentalWeb",
+    visual: "cars"
+  },
+  {
+    number: "04", title: "BudgetBites", category: "Mobile Application",
+    description: "A budget-focused recipe finder that helps users discover meals within a set budget, save recipes, and plan meals.",
+    stack: ["Flutter", "Dart", "Firebase"],
+    repo: "https://github.com/curttt18/RecipeBudget",
+    visual: "budget"
   }
 ];
 
@@ -69,6 +62,7 @@ function ProjectCard({ project }) {
           <h3>{project.title}</h3>
         </div>
         <p>{project.description}</p>
+        {project.award && <div className="award-label">🏆 {project.award}</div>}
         <div className="tags">{project.stack.map(s => <span key={s}>{s}</span>)}</div>
         <a className="project-link" href={project.repo} target="_blank" rel="noreferrer">View repository <Arrow/></a>
       </div>
