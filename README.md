@@ -1,5 +1,6 @@
 # Curt Reyes Portfolio
 
+
 A responsive developer portfolio built with React, Vite, and plain CSS.
 
 ## Requirements
